@@ -24,7 +24,6 @@
       lang: 'zh', // 设定表格语言
       functionButton:
         '<button id="" class="btn btn-primary" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">下载</button>',
-      hook: {},
     };
 
     luckysheet.create(options);
