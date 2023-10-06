@@ -6,6 +6,7 @@
     "jsx": "preserve",
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "noImplicitAny": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -14,10 +15,13 @@
     "sourceMap": true,
     "baseUrl": ".",
     "typeRoots": [
-      "./src/luckysheet.d.ts"
+      "./src/luckysheet.d.ts",
+      "./auto-imports.d.ts",
+      "./components.d.ts"
     ],
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "node"
     ],
     "paths": {
       "@/*": [
@@ -37,7 +41,9 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "src/luckysheet.d.ts"
+    "src/luckysheet.d.ts",
+    "auto-imports.d.ts",
+    "components.d.ts"
   ],
   "exclude": [
     "node_modules"
