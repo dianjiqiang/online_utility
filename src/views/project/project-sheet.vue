@@ -67,8 +67,16 @@
             console.log(operate);
           }
         },
-        sheetEditNameAfter(a, b, c) {
-          console.log(a, b, c);
+        sheetActivate(index, isPivotInitial, isNewSheet) {
+          // 新建
+          if (isNewSheet) {
+            console.log('新创建的工作表');
+          }
+          // 是数据透视表页面
+          if (isPivotInitial) {
+            console.log('数据透视表页面');
+          }
+          console.log(index, 'sheet index');
         },
       },
     };
