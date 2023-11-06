@@ -1,7 +1,7 @@
 <template>
   <div class="folder">
     <template v-for="(item, index) of fileList" :key="index">
-      <div class="file-list" @click="handleGoOfUtils">
+      <div class="file-list" @click="() => handleGoOfUtils(item.id)">
         <div class="top">
           <ExcelIcon />
           <div class="content">
@@ -45,9 +45,11 @@
     routeType = route.query.utils;
   });
 
-  const handleGoOfUtils = () => {
+  const handleGoOfUtils = (id: string) => {
     if (routeType === 'excel') {
-      router.push('/project/sheet/123');
+      router.push('/project/sheet/' + id);
+    } else if (routeType === 'word') {
+      router.push('/project/word/' + id);
     }
   };
 </script>

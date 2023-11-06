@@ -20,4 +20,12 @@ module.exports = defineConfig({
       }),
     ],
   },
+  devServer: {
+    proxy: {
+      '/word': {
+        target: 'http://localhost:9001',
+        pathRewrite: { '/word': '' },
+      },
+    },
+  },
 });

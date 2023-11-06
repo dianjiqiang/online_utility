@@ -14,8 +14,12 @@ declare let luckysheet: {
    */
   setCellValue: (row, column, value, setting?) => any;
   /**
-   *
    * @returns data数据
    */
   flowdata: () => any;
+  /**
+   * {PlainObject} [setting]: 可选参数
+   * {Function} [success]: 表格释放成功后的回调函数
+   */
+  destroy: () => void;
 };

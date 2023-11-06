@@ -36,6 +36,11 @@ const routes = [
         path: 'sheet/:id',
         component: () => import('@/views/project/project-sheet.vue'),
       },
+      {
+        name: 'ProjectWord',
+        path: 'word/:id',
+        component: () => import('@/views/project/project-word.vue'),
+      },
     ],
   },
 ];
